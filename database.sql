@@ -24,31 +24,58 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Estructura de tabla para la tabla `Movil`
 --
 
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `nombre` text NOT NULL
+CREATE TABLE `Movil` (
+  `Modelo` varchar(20) NOT NULL,
+  `Marca` varchar(20) NOT NULL,
+  `Precio` int(4) NOT NULL,
+  `Gama` varchar(5) NOT NULL,
+  `SistemaOperativo` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Volcado de datos para la tabla `Movil`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`) VALUES
-(1, 'mikel'),
-(2, 'aitor');
+INSERT INTO `Movil` (`Modelo`, `Marca`, `Precio`, `Gama`, `SistemaOperativo`) VALUES
+('iPhone15', 'Apple', 1000, 'Alta', 'IOS'),
+('iPhone8', 'Apple', 400, 'Media', 'IOS'),
+('Galaxy Mini', 'Samsung', 40, 'Baja', 'Android');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Usuario`
+--
+
+CREATE TABLE `Usuario` (
+  `Nombre` varchar(40) NOT NULL,
+  `DNI` varchar(9) NOT NULL,
+  `Telefono` int(9) NOT NULL,
+  `Fecha` varchar(20) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Contrasena` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `Usuario`
+--
+
+INSERT INTO `Usuario` (`Nombre`, `DNI`, `Telefono`, `Fecha`, `Email`, `Contrasena`) VALUES
+('Alain Pedrueza', '79224746G', 633501918, '2003-12-18', 'alainpedrueza@gmail.com', 'alain'),
+('Aitor Gonzalo', '72231041R', 663655005, '2003-02-9', 'aitorgonzalo03@gmail.com', 'aitor');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `usuarios`
+-- Indices de la tabla `Usuario`
 --
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `Usuario`
+  ADD PRIMARY KEY (`DNI`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
