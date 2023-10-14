@@ -1,9 +1,9 @@
 <?php
-$Modelo=$_GET['Modelo'];
-$Marca=$_GET['Marca']
-$Precio=$_GET['Precio']
-$Gama=$_GET['Gama'];
-$sistema_operativo=$_GET['SistemaOperativo'];
+$Modelo = $_GET['Modelo'];
+$Marca = $_GET['Marca'];
+$Precio = $_GET['Precio'];
+$Gama = $_GET['Gama'];
+$sistema_operativo = $_GET['SistemaOperativo'];
 ob_start();
 ?>
 <!DOCTYPE html>

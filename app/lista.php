@@ -12,7 +12,12 @@ if(!$conectar){
             echo"No Se Encontro La Base De Datos";
         }
 }
+/*$sesionactual=$_SESSION['Usuario'];
+$dniactual="SELECT DNI from Usuario where Modelo='$sesionactual'";
 
+$sql=mysqli_query($conectar,$dniactual);
+$dni=mysqli_fetch_array($sql)[0];
+*/
 $dni=$_SESSION['DNI'];
 $listamoviles="SELECT * FROM Movil";
 $lista=mysqli_query($conectar,$listamoviles);
@@ -61,8 +66,8 @@ $lista=mysqli_query($conectar,$listamoviles);
                         <th><?=$fila['Precio'] ?></th>
                         <th><?=$fila['Gama'] ?></th>
                         <th><?=$fila['SistemaOperativo'] ?></th>
-                        <th><a href="modificarMovil.php?Modelo=<?=$fila['Modelo']?>&Marca=<?=$fila['Marca']?>&Precio=<?=$fila['Precio']?>&Gama=<?=$fila['Gama']?>&SistemaOperativo=<?=$fila['SistemaOperativo']?>" class="editar">Editar</a></th>
-                        <th><a href="eliminarMovil.php?Modelo=<?=$fila['Modelo'] ?>&Marca=<?=$fila['Marca']?>&Precio=<?=$fila['Precio']?>&Gama=<?=$fila['Gama']?>&SistemaOperativo=<?=$fila['SistemaOperativo']?>" class="eliminar" onclick='return confirmacion()' >Eliminar</a></th>
+                        <th><a href="modificarMovil.php?Modelo=<?= $fila['Modelo'] ?>&Marca=<?= $fila['Marca'] ?>&Precio=<?= $fila['Precio'] ?>&Gama=<?= $fila['Gama'] ?>&SistemaOperativo=<?= $fila['SistemaOperativo'] ?>" class="editar">Editar</a></th>
+                        <th><a href="eliminarMovil.php?Modelo=<?= $fila['Modelo'] ?>&Marca=<?= $fila['Marca'] ?>&Precio=<?= $fila['Precio'] ?>&Gama=<?= $fila['Gama'] ?>&SistemaOperativo=<?= $fila['SistemaOperativo'] ?>" class="eliminar" onclick='return confirmacion()'>Eliminar</a></th>
                     </tr>
                 <?php endwhile; ?>
             </tbody>

@@ -27,7 +27,8 @@ $query = mysqli_query($conectar, $sql);
 
 if ($query) {
     echo 'Se ha eliminado el registro con Modelo ' . $modelo . ' de la lista';
-    header("Location: lista.php");
+    // Cambia la redirecci�n a la p�gina apropiada seg�n tus necesidades
+    header("Location: lista.php"); // Cambia "lista.php" por la p�gina que necesites
     exit();
 }
 
