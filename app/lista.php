@@ -12,12 +12,7 @@ if(!$conectar){
             echo"No Se Encontro La Base De Datos";
         }
 }
-/*$sesionactual=$_SESSION['Usuario'];
-$dniactual="SELECT DNI from Usuario where Modelo='$sesionactual'";
 
-$sql=mysqli_query($conectar,$dniactual);
-$dni=mysqli_fetch_array($sql)[0];
-*/
 $dni=$_SESSION['DNI'];
 $listamoviles="SELECT * FROM Movil";
 $lista=mysqli_query($conectar,$listamoviles);
