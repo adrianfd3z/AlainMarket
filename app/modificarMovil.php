@@ -18,7 +18,7 @@ ob_start();
 </head>
 <body>
   
-  <form class="formulario" action="modificarMovil.php?Modelo=<?=$Modelo?>&Marca=<?=$Marca?>&Precio=<?=$Precio?>&Gama=<?=$Gama?>&SistemaOperativo=<?=$sistema_operativo?>"method="POST" onsubmit="return comprobarCamposPerro();">
+  <form class="formulario" action="modificarMovil.php?Modelo=<?=$Modelo?>&Marca=<?=$Marca?>&Precio=<?=$Precio?>&Gama=<?=$Gama?>&SistemaOperativo=<?=$sistema_operativo?>"method="POST" onsubmit="return comprobarCampos();">
     <h4>Modificar datos de:</h4>
     <h4> <?php echo $Modelo;
     ?></h4>
