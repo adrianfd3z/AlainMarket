@@ -27,4 +27,4 @@ En la pagina de inicio encontraras varias opciones, lo primero que veras sera in
  
 En la parte superior de la página podras encontrar tres botones, una para volver a la pagina principal, otro para ir a la galeria, donde podras ver nuestra galería de moviles y uno ultimo para registrarte, y en caso de que ya lo estes, iniciar sesión.
 
-Por último, en la parte baja de la pagina de incio encontraras tres botones, uno con el que podras ver los moviles en segunda mano que ofertamos, otro para añadir tu propios moviles de segunda mano para poner en venta, y una ultima para modificar tus datos de usuario en caso de que lo necesites.
+Por último, en la parte baja de la pagina de incio encontraras tres botones, uno con el que podras ver los moviles en segunda mano que ofertamos, otro para añadir tu propios moviles de segunda mano para poner en venta, y una ultima para modificar los datos de usuario en caso de que lo necesites.
