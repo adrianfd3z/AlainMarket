@@ -8,7 +8,7 @@ body {
   background-color:#1c2125;
 }
 
-.formulario { /*Formulario en sí: color de fondo,fuente.... */
+.formulario { 
   width: 400px;
   background: #131b20;
   padding: 30px;
@@ -20,12 +20,12 @@ body {
   box-shadow: 7px 13px 37px #000;
 }
 
-.formulario h4 { /* "Formulario de Registro" texto*/
+.formulario h4 { 
   font-size: 22px;
   margin-bottom: 20px;
 }
 
-.caja { /*Cajas del formulario*/
+.caja { 
   width: 100%;
   background: #24303c;
   padding: 10px;
@@ -37,24 +37,24 @@ body {
   color: white;
 }
 
-.formulario p { /* Ya tienes cuenta?*/
+.formulario p { 
   height: 40px;
   text-align: center;
   font-size: 18px;
   line-height: 40px;
 }
 
-.formulario a { /* Ya tienes cuenta?*/
+.formulario a { 
   color: white;
   text-decoration: none;
 }
 
-.formulario a:hover { /* Ya tienes cuenta? para subrayar al pasar el raton por encima*/
+.formulario a:hover { 
   color: white;
   text-decoration: underline;
 }
 
-.formulario .botones { /*Los botones del formulario*/
+.formulario .botones {
   width: 100%;
   background: #ec1b31;
   border: none;
