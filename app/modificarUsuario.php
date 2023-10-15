@@ -47,9 +47,7 @@ session_start();
 </html>
 
 <?php
-//conectamos Con el servidor
 $conectar=@mysqli_connect("db","admin","test","database");
-//verificamos la conexion
 if(!$conectar){
     echo"No Se Pudo Conectar Con El Servidor";
 }else{
@@ -58,7 +56,6 @@ if(!$conectar){
             echo"No Se Encontro La Base De Datos";
         }
 }   
-//recuperar las variables
 $nombre=$_POST['nombre'];
 $dni=$_POST['dni'];
 $telefono=$_POST['telefono'];
@@ -68,9 +65,6 @@ $contrasena=$_POST['contrasena'];
 $actual=$_SESSION['DNI'];
 $actualNombre=$_SESSION['Usuario'];
 
-
-// si el campo esta vacio, no actualizar los datos.
-  
     $nombresql="UPDATE Usuario SET Nombre='$nombre' WHERE DNI='$actual' ";
     $dnisql="UPDATE Usuario SET DNI='$dni' WHERE DNI='$actual' ";
     $telefonosql="UPDATE Usuario SET Telefono='$telefono' WHERE DNI='$actual' ";
@@ -78,7 +72,6 @@ $actualNombre=$_SESSION['Usuario'];
     $emailsql="UPDATE Usuario SET Email='$email' WHERE DNI='$actual' ";
     $contrasenasql="UPDATE Usuario SET Contrasena='$contrasena' WHERE DNI='$actual' ";
 
-//-------------------------------------------------------------------------------
 if(!empty($dni)){
     $ejecutar2=mysqli_query($conectar,$dnisql);
     if($ejecutar2){
