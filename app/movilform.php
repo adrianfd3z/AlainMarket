@@ -1,9 +1,7 @@
 <?php
-ob_start(); // para borrar el output buffer https://stackoverflow.com/questions/12654831/php-headers-already-sent-caused-by-session-start
+ob_start(); 
 session_start();
-//conectamos Con el servidor
 $conectar=@mysqli_connect("db","admin","test","database");
-//verificamos la conexion
 if(!$conectar){
     echo"No Se Pudo Conectar Con El Servidor";
 }else{
@@ -18,8 +16,6 @@ $Precio=$_POST['precioMovil'];
 $Gama=$_POST['gamaMovil'];
 $SistemaOperativo=$_POST['sistemaOperativoMovil'];
 $sesionactual=$_SESSION['Usuario'];
-//$dniactual=$_SESSION['DNI'];
-
 
 $registrar="INSERT INTO Movil VALUES('$Modelo','$Marca','$Precio','$Gama','$SistemaOperativo')";
 $registro=mysqli_query($conectar,$registrar);
@@ -69,7 +65,7 @@ if(isset($Modelo,$Marca,$Precio,$Gama,$SistemaOperativo)){
 
     <input class="botones"type="submit" value="Registrar Movil" name="registrar.Movil">
     <input class="botones"type="reset" value="Borrar datos" name="borrar">
-    <input class="botones" type="button" value="Volver pagina principal" name="volver" onclick="location.href='index.html'">
+    <input class="botones" type="button" value="Volver pagina principal" name="volver" onclick="location.href='index.php'">
     
 </form>
 </body>
