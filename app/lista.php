@@ -1,9 +1,7 @@
-<?php //https://www.youtube.com/watch?v=sYaEoNy5OGs
+<?php
 ob_start();
 session_start();
-//conectamos Con el servidor
 $conectar=@mysqli_connect("db","admin","test","database");
-//verificamos la conexion
 if(!$conectar){
     echo"No Se Pudo Conectar Con El Servidor";
 }else{
@@ -12,12 +10,7 @@ if(!$conectar){
             echo"No Se Encontro La Base De Datos";
         }
 }
-/*$sesionactual=$_SESSION['Usuario'];
-$dniactual="SELECT DNI from Usuario where Modelo='$sesionactual'";
 
-$sql=mysqli_query($conectar,$dniactual);
-$dni=mysqli_fetch_array($sql)[0];
-*/
 $dni=$_SESSION['DNI'];
 $listamoviles="SELECT * FROM Movil";
 $lista=mysqli_query($conectar,$listamoviles);
@@ -75,7 +68,7 @@ $lista=mysqli_query($conectar,$listamoviles);
         </table>
         
     </div>
-    <input class="botones" type="button" value="Volver pagina principal" name="volver" onclick="location.href='index.html'">
+    <input class="botones" type="button" value="Volver pagina principal" name="volver" onclick="location.href='index.php'">
 </body>
 
 
