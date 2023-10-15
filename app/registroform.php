@@ -1,9 +1,7 @@
 <?php
-ob_start(); // para borrar el output buffer https://stackoverflow.com/questions/12654831/php-headers-already-sent-caused-by-session-start
+ob_start(); 
 session_start();
-//conectamos Con el servidor
 $conectar=@mysqli_connect("db","admin","test","database");
-//verificamos la conexion
 if(!$conectar){
     echo"No Se Pudo Conectar Con El Servidor";
 }else{
@@ -12,7 +10,6 @@ if(!$conectar){
             echo"No Se Encontro La Base De Datos";
         }
 }   
-//recuperar las variables
 $nombre=$_POST['nombre'];
 $dni=$_POST['dni'];
 $telefono=$_POST['telefono'];
@@ -20,11 +17,9 @@ $fecha=$_POST['fecha'];
 $email=$_POST['email'];
 $contrasena=$_POST['contrasena'];
 
-//hacemos la sentencia de sql
 $sql="INSERT INTO Usuario (Nombre,DNI,Telefono,Fecha,Email,Contrasena) VALUES('$nombre','$dni','$telefono','$fecha','$email','$contrasena')";
-//ejecutamos la sentencia de sql
 $ejecutar=mysqli_query($conectar,$sql);
-//verificamos la ejecucion
+
 if(isset($nombre,$dni,$telefono,$fecha,$email,$contrasena)){
   if(!$ejecutar){
       ?> 
@@ -74,7 +69,7 @@ if(isset($nombre,$dni,$telefono,$fecha,$email,$contrasena)){
 
     <input class="botones"type="submit" value="Registrar usuario" name="registrar">
     <input class="botones"type="reset" value="Borrar datos" name="borrar">
-    <input class="botones" type="button" value="Volver página principal" name="volver" onclick="location.href='index.html'">
+    <input class="botones" type="button" value="Volver página principal" name="volver" onclick="location.href='index.php'">
     <p><a href="iniciosesion.php">Ya tengo Cuenta</a></p>
 </form>
 </body>
