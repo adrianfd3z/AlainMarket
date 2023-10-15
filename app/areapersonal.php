@@ -30,7 +30,7 @@ $lista=mysqli_query($conectar,$datosusuario);
   <h2> ¡Bienvenido <?php echo $_SESSION['Usuario']?> !</h2>
   <h2> ¿Qué deseas hacer? </h2>
   <input class="botones" type="button" value="Modificar datos" name="modificar" onclick="location.href='modificarUsuario.php'">
-  <input class="botones" type="button" value="Volver página principal" name="volver" onclick="location.href='index.html'">
+  <input class="botones" type="button" value="Volver página principal" name="volver" onclick="location.href='index.php'">
 </form>
 <div class="lista">
         <h2>Tus datos</h2>
