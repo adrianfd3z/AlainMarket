@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 $conectar=@mysqli_connect("db","admin","test","database");
-//verificamos la conexion
+
 if(!$conectar){
     echo"No Se Pudo Conectar Con El Servidor";
 }else{
@@ -11,12 +11,7 @@ if(!$conectar){
             echo"No Se Encontro La Base De Datos";
         }
 }
-/*$sesionactual=$_SESSION['Usuario'];
-$dniactual="SELECT DNI from Usuario where Nombre='$sesionactual'";
 
-$sql=mysqli_query($conectar,$dniactual);
-$dni=mysqli_fetch_array($sql)[0];
-*/
 $dni=$_SESSION['DNI'];
 $datosusuario="SELECT * FROM Usuario WHERE(DNI='$dni')";
 $lista=mysqli_query($conectar,$datosusuario);
