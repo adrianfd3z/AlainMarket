@@ -1,6 +1,7 @@
 # ALAINPHONE (Alain Pedrueza, Aitor Gonzalo, Adrian Fernandez, Unai De Leon y Oscar Basaguren)
 
 Este proyecto trata sobre el desarrollo de una página web usando HTML,CSS,JavaScript,PHP,MariaDB y Docker.
+
 Para nuestro proyecto hemos decidido crear una tienda de telefonos moviles con un sistema de venta de segunda mano.
 ## Instrucciones para el despliegue
 1.Situarse en el directorio:
