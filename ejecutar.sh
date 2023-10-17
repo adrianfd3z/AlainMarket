@@ -9,6 +9,7 @@ sudo docker-compose up -d
 # Esperar un tiempo antes de abrir las URL (ajusta el tiempo según sea necesario)
 sleep 5
 
+
 # Abrir las URL en Firefox
 xdg-open http://localhost:8890/
 xdg-open http://localhost:81/
