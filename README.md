@@ -1,4 +1,4 @@
-# ALAINPHONE (Alain Pedrueza, Aitor Gonzalo, Adrian Fernandez, Unai De Leon y Oscar Basaguren)
+# ALAINPHONE (Alain Pedrueza, Aitor Gonzalo, Adrian Fernandez, Unai De Leon y Oscar Basaguren)   
 
 Este proyecto trata sobre el desarrollo de una página web usando HTML,CSS,JavaScript,PHP,MariaDB y Docker.
 
