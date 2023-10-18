@@ -22,7 +22,6 @@ $ ./ejecutar.sh
 
 6.El ejecutable anterior ya nos habra abierto una pestaña con el localhost:81, en el cual esta la pagina web. (en caso de problema refresca la pagina).
 
-
 ## Uso de la página
 En la pagina de inicio encontraras varias opciones, lo primero que veras sera informacion sobre nosotros y nuestra tienda, además de donde nos encontramos y nuestro correo y telefono de contacto.
  
