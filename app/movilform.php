@@ -29,7 +29,7 @@ $dniactual=$_SESSION['DNI'];
 if(!isset($_SESSION['Usuario']) || !isset($_SESSION['DNI'])){
   header("location:iniciosesion.php");
 }else{
-  if(isset($modeloMovil,$marcaMovil,$precioMovil,$gamaMovil,$sistemaOperativoMovil)){
+  if(isset($Modelo,$Marca,$Precio,$Gama,$SistemaOperativo)){
     if($registrar=$conectar->prepare("INSERT INTO Movil VALUES(?,?,?,?,?,?)")){
       $registrar->bind_param('ssisss',htmlspecialchars(mysqli_real_escape_string($conectar,$Modelo)),htmlspecialchars(mysqli_real_escape_string($conectar,$Marca)),htmlspecialchars(mysqli_real_escape_string($conectar,$Precio)),htmlspecialchars(mysqli_real_escape_string($conectar,$Gama)),htmlspecialchars(mysqli_real_escape_string($conectar,$SistemaOperativo)),htmlspecialchars(mysqli_real_escape_string($conectar,$dniactual)));
       $registrar->execute();
@@ -64,7 +64,7 @@ if(!isset($_SESSION['Usuario']) || !isset($_SESSION['DNI'])){
 </head>
 <body>
  
-   <form class="formulario" action="movilform.php" method="POST" onsubmit="return registrarMovil();">
+   <form class="formulario" action="movilform.php" method="POST" onsubmit="return TRUE">
     <h4>Registrar movil</h4>
     <p>Modelo:</p>
     <input class="caja" type="text" name="modeloMovil" id ='nombreRegistro' placeholder="p. ej iPhone15" required>

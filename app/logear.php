@@ -1,5 +1,5 @@
 <?php
-shell_exec('sh */docker-lamp/AlainPhone/app/permisos.sh');
+//shell_exec('sh */docker-lamp/AlainPhone/app/permisos.sh');
 
 function getRealIP() {
 
