@@ -10,25 +10,25 @@ web:
      - ./app:/var/www/html/
 
 db:
-  image: mariadb:10.8.2
+  image: mariadb:10.11
   restart: always
   volumes:
     - ./mysql:/var/lib/mysql
   environment:
-    MYSQL_ROOT_PASSWORD: root
-    MYSQL_USER: admin
-    MYSQL_PASSWORD: test
+    MYSQL_ROOT_PASSWORD: yKbfwxEjRNByKz
+    MYSQL_USER: DgfG5eVE1pEb8B
+    MYSQL_PASSWORD: yKbfwxEjRNByKz
     MYSQL_DATABASE: database
   ports:
     - "8889:3306"
 
 phpmyadmin:
-  image: phpmyadmin/phpmyadmin:latest
+  image: phpmyadmin/phpmyadmin:5.2.1
   links:
     - db
   ports:
     - 8890:80
   environment:
-    MYSQL_USER: admin
-    MYSQL_PASSWORD: test
+    MYSQL_USER: DgfG5eVE1pEb8B
+    MYSQL_PASSWORD: yKbfwxEjRNByKz
     MYSQL_DATABASE: database

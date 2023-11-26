@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 19-11-2022 a las 11:59:18
+-- Tiempo de generación: 19-11-2023 a las 11:59:18
 -- Versión del servidor: 10.8.2-MariaDB-1:10.8.2+maria~focal
 -- Versión de PHP: 8.0.19
 
@@ -36,69 +36,26 @@ CREATE TABLE `Log` (
 -- Volcado de datos para la tabla `Log`
 --
 
-INSERT INTO `Log` (`Descripcion`, `IP`) VALUES
-('Contraseña incorrecta,usuario con DNI  79045038H', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI  79045038H', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI  79045038H', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI  79045038H', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI 79045038H', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI 79045038H', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI 79045038H', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI 79045038H', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI 79045038H', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Contraseña incorrecta,usuario con DNI 79045038H', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1'),
-('Se ha iniciado sesión correctamente', '172.17.0.1');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Perro`
+-- Estructura de tabla para la tabla `Movil`
 --
 
 CREATE TABLE `Movil` (
   `Modelo` varchar(20) NOT NULL,
   `Marca` varchar(20) NOT NULL,
-  `Precio` int(3) NOT NULL,
+  `Precio` int(4) NOT NULL,
   `Gama` varchar(20) NOT NULL,
   `SistemaOperativo` varchar(20) NOT NULL,
   `DNIDueño` varchar(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `Perro`
+-- Volcado de datos para la tabla `Movil`
 --
 
-INSERT INTO `Movil` (`Modelo`, `Marca`, `Precio`, `Gama`, `SistemaOperativo`, `DNIDueño`) VALUES
-('iPhone15', 'Apple', 1000, 'Alta', 'IOS','79224746G'),
-('iPhone8', 'Apple', 400, 'Media', 'IOS', '79224746G'),
-('Galaxy Mini', 'Samsung', 40, 'Baja', 'Android','72231041R');
 
 -- --------------------------------------------------------
 
@@ -119,15 +76,9 @@ CREATE TABLE `Usuario` (
 -- Volcado de datos para la tabla `Usuario`
 --
 
-INSERT INTO `Usuario` (`Nombre`, `DNI`, `Telefono`, `Fecha`, `Email`, `Contrasena`) VALUES
-('Alain Pedrueza', '79224746G', 633501918, '2003-12-18', 'alainpedrueza@gmail.com', 'alain'),
-('Aitor Gonzalo', '72231041R', 663655005, '2003-02-9', 'aitorgonzalo03@gmail.com', 'aitor');
---
--- Índices para tablas volcadas
---
 
 --
--- Indices de la tabla `Perro`
+-- Indices de la tabla `Movil`
 --
 ALTER TABLE `Movil`
   ADD PRIMARY KEY (`Modelo`,`DNIDueño`),
@@ -144,7 +95,7 @@ ALTER TABLE `Usuario`
 --
 
 --
--- Filtros para la tabla `Perro`
+-- Filtros para la tabla `Movil`
 --
 ALTER TABLE `Movil`
   ADD CONSTRAINT `DNIDueñoYMovil` FOREIGN KEY (`DNIDueño`) REFERENCES `Usuario` (`DNI`) ON DELETE CASCADE ON UPDATE CASCADE;
