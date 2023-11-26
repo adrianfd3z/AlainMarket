@@ -41,7 +41,7 @@ h2 {
     background: #ec1b31;
     border: none;
     padding: 12px;
-    color: #ec1b31;
+    color: #000000;
     margin: 16px 0;
     font-size: 16px;
 }
@@ -73,7 +73,7 @@ tr:hover {
     background-color: #ec1b31;
 }
 
-.editar, .eliminar {
+.editar, .eliminar, .botones {
     padding: 5px 10px;
     text-decoration: none;
     color: #130f0f;
@@ -90,8 +90,4 @@ tr:hover {
 
 .eliminar {
     background-color: #e74c3c;
-}
-
-.eliminar:hover {
-    background-color: #c0392b;
 }
